@@ -1,0 +1,17 @@
+{
+  "name": "redux",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "NPC",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
+  }
+}
