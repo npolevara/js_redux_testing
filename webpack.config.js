@@ -10,14 +10,24 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: '/static/',
+    hotUpdateChunkFilename: 'hot/hot-update.js',
+    hotUpdateMainFilename: 'hot/hot-update.json'
 },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
   ],
   module: {
+    preloaders: [
+      {
+        test: /\.js$/,
+        loaders: ['eslint'],
+        include: [
+        path.resolve(__dirname, "src"),
+        ],
+      }
+    ],
     loaders: [
       {
         loaders: ['react-hot','babel-loader'],
