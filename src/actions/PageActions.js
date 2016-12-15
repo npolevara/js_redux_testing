@@ -17,6 +17,6 @@ export function getPhotos(year) {
         type: SET_PHOTOS_SUCCESS,
         payload: [1,2,3,4,5]
       })
-    }, 1000)
+    }, 5000)
   }
 }
